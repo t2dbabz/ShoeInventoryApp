@@ -21,17 +21,18 @@ class ShoeListFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_shoe_list, container, false)
         setHasOptionsMenu(true)
         binding.lifecycleOwner = this
 
         binding.addNewShoeButton.setOnClickListener {
+            viewModel.initializeValues()
             findNavController().navigate(R.id.action_shoeListFragment_to_shoeDetailFragment)
         }
 
-        viewModel.shoeListData.observe(viewLifecycleOwner, Observer { shoeList ->
+        viewModel.shoeListData.observe(viewLifecycleOwner, { shoeList ->
             shoeList.forEach { shoe ->
                 val shoeListItem = ShoeListItemBinding.inflate(layoutInflater)
                 shoeListItem.shoe = shoe

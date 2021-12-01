@@ -17,7 +17,7 @@
     <string name="get_started">get started</string>
     <string name="instructions_heading">Instructions\non\nhow to get started</string>
     <string name="welcome_heading">Welcome\nto the\nShoe Store Inventory</string>
-    <string name="welcome_text_two">All the Shoes in one Place</string>
+    <string name="welcome_text_two">All your Shoes in one Place</string>
     <string name="add_new_shoe">add new shoe</string>
     <string name="shoe_detail_heading">Add Shoe to the Inventory</string>
     <string name="shoe_name_label">Shoe Name</string>
@@ -35,4 +35,9 @@
     <string name="shoe_color">Color: %s</string>
     <string name="shoe_size">Size: %s</string>
  <string name="logout">Logout</string>
+ <string name="save">Save</string>
+ <string name="cancel">Cancel</string>
+ <string name="size_hint">Size</string>
+ <string name="continue_text">Continue</string>
+ <string name="shoe_image_text">shoe image</string>
 </resources>

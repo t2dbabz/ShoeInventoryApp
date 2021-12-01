@@ -25,4 +25,12 @@ class ShoeViewModel(): ViewModel() {
         shoeList.add(shoe)
         _shoeListData.value = shoeList
     }
+
+    fun initializeValues() {
+        shoeName = ""
+        shoeSize = 0.0
+        shoeCompany = ""
+        shoeColor = ""
+        shoeDescription = ""
+    }
 }

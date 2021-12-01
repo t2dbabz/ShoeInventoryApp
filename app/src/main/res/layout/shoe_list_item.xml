@@ -1,99 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="shoe"
             type="com.tunde.shoeinventory.model.Shoe" />
     </data>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardView"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:layout_margin="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_small"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/shoeName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:textSize="14sp"
-                android:text="@{String.format(@string/shoe_name, shoe.name)}"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Name: Slides"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/shoeDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/layout_margin"
-                android:layout_marginTop="8dp"
-                android:textSize="14sp"
-                android:text="@{String.format(@string/shoe_description, shoe.description)}"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/shoeName"
-                tools:text="Description: A nice sleek shoe for ease" />
+                <TextView
+                    android:id="@+id/shoeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/layout_margin"
+                    android:layout_marginTop="@dimen/layout_margin"
+                    android:textColor="@color/black"
+                    android:fontFamily="serif"
+                    android:text="@{String.format(@string/shoe_name, shoe.name)}"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Name: Slides" />
 
-            <TextView
-                android:id="@+id/shoeCompany"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:textSize="14sp"
-                android:text="@{String.format(@string/shoe_company, shoe.company)}"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/shoeDescription"
-                tools:text="Company: Nike" />
+                <TextView
+                    android:id="@+id/shoeDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/layout_margin"
+                    android:layout_marginTop="@dimen/layout_margin_small"
+                    android:textColor="@color/black"
+                    android:fontFamily="serif"
+                    android:text="@{String.format(@string/shoe_description, shoe.description)}"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/shoeName"
+                    tools:text="Description: A nice sleek shoe for ease" />
 
-            <TextView
-                android:id="@+id/shoeColor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:textSize="14sp"
-                android:text="@{String.format(@string/shoe_color, shoe.color)}"
-                android:layout_marginBottom="@dimen/layout_margin"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/shoeCompany"
-                tools:text="Color: Red" />
+                <TextView
+                    android:id="@+id/shoeCompany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/layout_margin"
+                    android:layout_marginTop="@dimen/layout_margin_small"
+                    android:textColor="@color/black"
+                    android:fontFamily="serif"
+                    android:text="@{String.format(@string/shoe_company, shoe.company)}"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/shoeDescription"
+                    tools:text="Company: Nike" />
 
-            <TextView
-                android:id="@+id/shoeSize"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:textSize="14sp"
-                android:text="@{String.format(@string/shoe_size, shoe.size)}"
-                android:layout_marginBottom="@dimen/layout_margin"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/shoeColor"
-                tools:text="Size: 12" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/shoeColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/layout_margin"
+                    android:layout_marginTop="@dimen/layout_margin_small"
+                    android:layout_marginBottom="@dimen/layout_margin"
+                    android:textColor="@color/black"
+                    android:fontFamily="serif"
+                    android:text="@{String.format(@string/shoe_color, shoe.color)}"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/shoeCompany"
+                    tools:text="Color: Red" />
 
-    </com.google.android.material.card.MaterialCardView>
-    
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/shoeSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/layout_margin"
+                    android:layout_marginBottom="@dimen/layout_margin"
+                    android:textColor="@color/black"
+                    android:fontFamily="serif"
+                    android:text="@{String.format(@string/shoe_size, shoe.size)}"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/shoeColor"
+                    tools:text="Size: 12" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
