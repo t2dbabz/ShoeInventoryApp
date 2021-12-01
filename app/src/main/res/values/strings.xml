@@ -15,7 +15,7 @@
     <string name="instruction_one">Press the Floating action button to add a new shoe to the inventory.</string>
     <string name="instruction_two">Fill the details of the Shoe in the edit text in the shoe detail screen and press save.</string>
     <string name="get_started">get started</string>
-    <string name="instructions_heading">Instructions\non\nHow to get started</string>
+    <string name="instructions_heading">Instructions\non\nhow to get started</string>
     <string name="welcome_heading">Welcome\nto the\nShoe Store Inventory</string>
     <string name="welcome_text_two">All the Shoes in one Place</string>
     <string name="add_new_shoe">add new shoe</string>

@@ -25,6 +25,9 @@ class LoginFragment : Fragment() {
         binding.loginButton.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
         }
+        binding.registerButton.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+        }
         return binding.root
     }
 }
