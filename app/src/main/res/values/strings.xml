@@ -14,4 +14,5 @@
     <string name="instructions_heading">Instructions\non\nHow to get started</string>
     <string name="welcome_heading">Welcome\nto the\nShoe Store Inventory</string>
     <string name="welcome_text_two">All the Shoes in one Place</string>
+    <string name="add_new_shoe">add new shoe</string>
 </resources>
