@@ -4,18 +4,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-
+    <data>
+        <variable
+            name="shoe"
+            type="com.tunde.shoeinventory.model.Shoe" />
+    </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/teal_700">
+    >
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
+        android:layout_margin="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +35,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:textSize="18sp"
+                android:textSize="14sp"
+                android:text="@{String.format(@string/shoe_name, shoe.name)}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Name: Slides"/>
@@ -41,7 +47,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/layout_margin"
                 android:layout_marginTop="8dp"
-                android:textSize="18sp"
+                android:textSize="14sp"
+                android:text="@{String.format(@string/shoe_description, shoe.description)}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/shoeName"
                 tools:text="Description: A nice sleek shoe for ease" />
@@ -52,7 +59,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:textSize="18sp"
+                android:textSize="14sp"
+                android:text="@{String.format(@string/shoe_company, shoe.company)}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/shoeDescription"
                 tools:text="Company: Nike" />
@@ -63,7 +71,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:textSize="18sp"
+                android:textSize="14sp"
+                android:text="@{String.format(@string/shoe_color, shoe.color)}"
                 android:layout_marginBottom="@dimen/layout_margin"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +84,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:textSize="18sp"
+                android:textSize="14sp"
+                android:text="@{String.format(@string/shoe_size, shoe.size)}"
                 android:layout_marginBottom="@dimen/layout_margin"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -83,9 +93,7 @@
                 tools:text="Size: 12" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     </com.google.android.material.card.MaterialCardView>
-
-
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

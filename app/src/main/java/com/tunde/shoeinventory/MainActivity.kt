@@ -26,14 +26,12 @@ class MainActivity : AppCompatActivity() {
         ) as NavHostFragment
         navController = navHostFragment.navController
 
-        appBarConfiguration = AppBarConfiguration(navController.graph)
+        val topLevelDestinations = setOf(R.id.loginFragment, R.id.welcomeFragment, R.id.shoeListFragment)
+
+        appBarConfiguration = AppBarConfiguration(topLevelDestinations)
 
         // Set up the action bar for use with the NavController
         setupActionBarWithNavController(navController, appBarConfiguration)
-
-
-
-
     }
 
     override fun onSupportNavigateUp(): Boolean {

@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Shoe Inventory</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+   <string name="login_screen_label">Login</string>
+   <string name="welcom_screen_label">Welcome</string>
+   <string name="Instruction_screen_label">Instructions</string>
+   <string name="shoeList_screen_label">Shoe Listing</string>
+   <string name="shoeDetail_screen_label">Shoe Detail</string>
     <string name="username">username</string>
     <string name="enter_password">Enter Password</string>
     <string name="password">password</string>
@@ -15,4 +19,20 @@
     <string name="welcome_heading">Welcome\nto the\nShoe Store Inventory</string>
     <string name="welcome_text_two">All the Shoes in one Place</string>
     <string name="add_new_shoe">add new shoe</string>
+    <string name="shoe_detail_heading">Add Shoe to the Inventory</string>
+    <string name="shoe_name_label">Shoe Name</string>
+    <string name="name_hint">Name</string>
+    <string name="shoe_description_label">Shoe Description</string>
+    <string name="description_hint">Description</string>
+    <string name="shoe_company_label">Shoe Company</string>
+    <string name="company_hint">Company</string>
+    <string name="shoe_color_label">Shoe Color</string>
+    <string name="color_hint">Color</string>
+    <string name="shoe_size_label">Shoe Size</string>
+    <string name="shoe_name">Name: %s</string>
+    <string name="shoe_description">Description: %s</string>
+    <string name="shoe_company">Company: %s</string>
+    <string name="shoe_color">Color: %s</string>
+    <string name="shoe_size">Size: %s</string>
+ <string name="logout">Logout</string>
 </resources>

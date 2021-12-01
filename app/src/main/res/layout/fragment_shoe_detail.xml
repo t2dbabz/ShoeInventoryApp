@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="shoeViewModel"
+            type="com.tunde.shoeinventory.viewmodel.ShoeViewModel" />
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -19,7 +25,7 @@
                 android:layout_marginStart="@dimen/layout_margin"
                 android:layout_marginTop="@dimen/layout_margin"
                 android:layout_marginEnd="@dimen/layout_margin"
-                android:text="Add Shoe to the Inventory"
+                android:text="@string/shoe_detail_heading"
                 android:textAlignment="center"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Shoe Name"
+                android:text="@string/shoe_name_label"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -53,7 +59,8 @@
                     android:id="@+id/shoeDescription_editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Name" />
+                    android:text="@={shoeViewModel.shoeName}"
+                    android:hint="@string/name_hint" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -62,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Shoe Description"
+                android:text="@string/shoe_description_label"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/shoeName_textInputLayout" />
 
@@ -82,7 +89,8 @@
                     android:id="@+id/shoeName_editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Description" />
+                    android:text="@={shoeViewModel.shoeDescription}"
+                    android:hint="@string/description_hint" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -91,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Shoe Company"
+                android:text="@string/shoe_company_label"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/shoeDescription_textInputLayout" />
 
@@ -111,7 +119,8 @@
                     android:id="@+id/shoeCompany_editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Company" />
+                    android:text="@={shoeViewModel.shoeCompany}"
+                    android:hint="@string/company_hint" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -120,7 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Shoe Color"
+                android:text="@string/shoe_color_label"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/shoeCompany_textInputLayout" />
 
@@ -140,7 +149,8 @@
                     android:id="@+id/shoeColor_editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Color" />
+                    android:text="@={shoeViewModel.shoeColor}"
+                    android:hint="@string/color_hint" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -149,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Shoe Size"
+                android:text="@string/shoe_size_label"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/shoeColor_textInputLayout" />
 
@@ -169,6 +179,7 @@
                     android:id="@+id/shoeSize_editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="@={`` + shoeViewModel.shoeSize}"
                     android:hint="Size" />
             </com.google.android.material.textfield.TextInputLayout>
 
