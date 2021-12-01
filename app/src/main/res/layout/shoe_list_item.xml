@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="shoe"
             type="com.tunde.shoeinventory.model.Shoe" />
     </data>
 
+    <!--    Used ConstraintLayout here because is better used in placing
+         views relative to each other, flexible and provides a flat hierarchy-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

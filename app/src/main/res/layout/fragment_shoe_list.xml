@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-
+    <!--    Used ConstraintLayout here because is better used in placing
+        views relative to each other, flexible and provides a flat hierarchy-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,11 +20,15 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
+<!--     Linear Layout was used here because it make it easy to add the shoe list item vertically at runtime-->
             <LinearLayout
                 android:id="@+id/shoeList_linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+<!--                The shoe list item view would be added here-->
 
             </LinearLayout>
 
